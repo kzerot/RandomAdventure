@@ -1,0 +1,107 @@
+{
+	"base": {
+		"name" : "Основные",
+		"value": false,
+		"order" : -1
+	},
+	"str" : {
+		"name" : "Сила",
+		"value" : 10,
+		"order" : 0,
+		"cost": 10
+	},
+	"dex" : {
+		"name" : "Ловкость",
+		"value" : 10,
+		"order" : 1,
+		"cost": 10
+	},
+	"sta" : {
+		"name" : "Выносливость",
+		"value" : 10,
+		"order" : 2,
+		"cost": 10
+	},
+	"tou" : {
+		"name" : "Стойкость",
+		"value" : 10,
+		"order" : 3,
+		"cost": 10
+	},
+	"spd" : {
+		"name" : "Скорость",
+		"value" : 10,
+		"order" : 4,
+		"cost": 10
+	},
+	"mov" : {
+		"name" : "Скорость бега",
+		"value" : 10,
+		"order" : 5,
+		"cost": 10
+	},
+	"skills": {
+		"name" : "Умения",
+		"value": false,
+		"order" : 6
+	},	
+	"ws" : {
+		"name" : "Владение ...",
+		"value" : 10,
+		"order" : 7,
+		"cost": 10
+	},
+	"bs" : {
+		"name" : "Меткость",
+		"value" : 10,
+		"order" : 8,
+		"cost": 10
+	},
+	"inv" : {
+		"name" : "Незаметность",
+		"value" : 10,
+		"order" : 9,
+		"cost": 10
+	},
+	"att" : {
+		"name" : "Внимательность",
+		"value" : 10,
+		"order" : 10,
+		"cost": 10
+	},
+	"wskills": {
+		"name" : "Мирные навыки",
+		"value": false,
+		"order" : 11
+	},	
+	"per" : {
+		"name" : "Убеждение",
+		"value" : 10,
+		"order" : 12,
+		"cost": 10
+	},
+	"inf" : {
+		"name" : "Мастер сбора информации",
+		"value" : 10,
+		"order" : 13,
+		"cost": 10
+	},
+	"trd" : {
+		"name" : "Торговля",
+		"value" : 10,
+		"order" : 14,
+		"cost": 10
+	},
+	"grm" : {
+		"name" : "Мастер грима",
+		"value" : 10,
+		"order" : 15,
+		"cost": 10
+	},
+	"amb" : {
+		"name" : "Мастер засад",
+		"value" : 10,
+		"order" : 16,
+		"cost": 10
+	}
+}

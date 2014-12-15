@@ -1,0 +1,64 @@
+ <div class="col-sm-6 col-md-4 col-lg-2">
+     <div class="well hero">
+         <input type="hidden" class="hero_class" value="{{hero.id}}"/>
+         <p class="caption_main">{{hero.name}}</p>
+         <div class="divider"></div>
+        <div class="param caption_button exp" value="{{'exp_'+str(hero.id)}}">
+            <p class="param">Опыт: </p>
+            <p id="{{'exp_'+str(hero.id)}}" class="param">{{hero.exp}}</p>
+        </div>
+         {%for bar in hero.get_bars()%}
+            <p class="param">{{bar.name}}</p>
+         <div class="bar_container">
+             <div class="left">
+                <p class="bar_button button_minus"  value="{{'bars_'+str(hero.id)+'_'+bar.id}}"></p>
+             </div>
+             <div class="center">
+             <div  class="bar">
+                <p style="width: {{bar.percent}}%;background-color: red;" id="{{'bars_'+str(hero.id)+'_'+bar.id}}">{{bar.value}}</p>
+             </div></div>
+             <div class="right">
+                <p class="bar_button button_plus" value="{{'bars_'+str(hero.id)+'_'+bar.id}}"></p>
+             </div>
+         </div>
+         {%end%}
+
+         <div class="divider"></div>
+        <p class="caption_button" data-toggle="collapse" data-target="#params_{{hero.id}}" aria-expanded="false" aria-controls="params_{{hero.id}}">
+          Характеристики
+        </p>
+         <div id="params_{{hero.id}}" class="collapse" aria-expanded="false">
+             {%for param in hero.get_params()%}
+                {%if param.value%}
+                    <div class="param">
+                        <div class="half_column" style="text-align: right;"><p class="param">{{param.name}}: </p></div>
+                        <div class="half_column"><p id="{{'param_'+str(hero.id)+'_'+param.id}}" class="param">{{param.value}}</p> </div>
+                        <div class="clear"></div>
+                    </div>
+                {%else%}
+                     <p class="caption_small">{{param.name}}</p>
+                {%end%}
+
+             {%end%}
+         </div>
+     </div>
+ </div>
+
+<!-- Modal -->
+<div class="modal fade" id="expUp" tabindex="-1" role="dialog" aria-labelledby="expUpLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="expUpLabel">Повышение характеристик</h4>
+      </div>
+      <div class="modal-body" id="exp_data">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Передумал</button>
+        <button type="button" class="btn btn-primary" id="save_btn">Да будет так!</button>
+      </div>
+    </div>
+  </div>
+</div>
